@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyTherapy.BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,7 @@ namespace MyTherapy
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            DataManager.TestConnection(Utility.GetConnectionString);
         }
 
         protected void clickMeButton_Click(object sender, EventArgs e)
