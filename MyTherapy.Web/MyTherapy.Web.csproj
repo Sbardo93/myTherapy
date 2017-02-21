@@ -82,11 +82,11 @@
     <Content Include="css\customCss.css" />
     <Content Include="css\metisMenu\metisMenu.css" />
     <Content Include="css\metisMenu\metisMenu.min.css" />
-    <Content Include="Default.aspx" />
+    <Content Include="Pages\Default.aspx" />
     <Content Include="js\metisMenu\metisMenu.js" />
     <Content Include="js\metisMenu\metisMenu.min.js" />
     <Content Include="js\customJS.js" />
-    <Content Include="Login.aspx" />
+    <Content Include="Pages\Login.aspx" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -115,18 +115,18 @@
     <Compile Include="BaseClasses\ucBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.cs">
+    <Compile Include="Pages\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
+    <Compile Include="Pages\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
