@@ -1,10 +1,10 @@
 using System.Data.Entity;
-namespace MyTherapy.BusinessLogic
+namespace MyTherapy.BusinessLogic.DB
 {
     public partial class MyTherapyDB : DbContext
     {
         public MyTherapyDB()
-            : base("name=MyTherapyDB")
+            : base("MyTherapyDB")
         {
         }
 

@@ -106,7 +106,7 @@
     <Content Include="css\datatables.min.css" />
     <Content Include="css\font-awesome\css\font-awesome.css" />
     <Content Include="css\font-awesome\fonts\fontawesome-webfont.svg" />
-    <Content Include="ucSmartGrid.ascx" />
+    <Content Include="UserControls\ucSmartGrid.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -115,6 +115,7 @@
     <Compile Include="BaseClasses\ucBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Objects\Utente.cs" />
     <Compile Include="Pages\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -138,19 +139,18 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="SmartGridUtility.cs" />
-    <Compile Include="ucSmartGrid.ascx.cs">
+    <Compile Include="UserControls\SmartGridUtility.cs" />
+    <Compile Include="UserControls\ucSmartGrid.ascx.cs">
       <DependentUpon>ucSmartGrid.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ucSmartGrid.ascx.designer.cs">
+    <Compile Include="UserControls\ucSmartGrid.ascx.designer.cs">
       <DependentUpon>ucSmartGrid.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyTherapy.BusinessLogic\MyTherapy.BusinessLogic.csproj">
-      <Project>{44D9F975-9DB2-4A7D-A68F-72F7B7A264A8}</Project>
+      <Project>{44d9f975-9db2-4a7d-a68f-72f7b7a264a8}</Project>
       <Name>MyTherapy.BusinessLogic</Name>
     </ProjectReference>
   </ItemGroup>

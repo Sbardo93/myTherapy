@@ -1,15 +1,25 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
 
-namespace MyTherapy.BusinessLogic
+namespace MyTherapy.BusinessLogic.DB
 {
     public class DataManager
     {
-        public static bool TestConnectionLINQ(string connString)
+        public static string ConnectionString
         {
-            using (MyTherapyDB db = new MyTherapyDB(connString))
+            get
+            {
+                return Properties.Settings.Default.MyTherapyDB;
+            }
+        }
+
+        public static List<user> GetUsers()
+        {
+            using (MyTherapyDB db = new MyTherapyDB(ConnectionString))
             {
                 var res = (from a in db.user select a).ToList();
-                return res.Any();
+                return res;
             }
         }
     }

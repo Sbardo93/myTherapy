@@ -1,38 +1,31 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucSmartGrid.ascx.cs" Inherits="MyTherapy.Web.ucSmartGrid" %>
 <style type="text/css">
-    #divSmartGrid {
-        text-align: center;
-        font-family: Verdana,Arial,Helvetica,sans-serif;
-        font-size: 11px;
-        width: 100%;
-    }
-
-    .dataTables_selectedRows, .dataTables_toggleCheckboxes {
+    .divSmartGrid .dataTables_selectedRows, .divSmartGrid .dataTables_toggleCheckboxes {
         text-align: center;
     }
 
-    .dataTables_selectedRows span {
-        font-size: 14px !important;
-    }
+        .divSmartGrid .dataTables_selectedRows span {
+            font-size: 14px !important;
+        }
 
-    #divSmartGrid input[type="radio"], #divSmartGrid input[type="checkbox"] {
+    .divSmartGrid input[type="radio"], .divSmartGrid input[type="checkbox"] {
         display: none;
     }
 
-    #divSmartGrid input[type="checkbox"] + span:before {
-        font-family: 'FontAwesome';
-        padding-right: 3px;
-        font-size: 14px;
-    }
+        .divSmartGrid input[type="checkbox"] + span:before {
+            font-family: 'FontAwesome';
+            padding-right: 3px;
+            font-size: 14px;
+        }
 
-    #divSmartGrid input[type="checkbox"] + span:before {
-        content: "\f096"; /* check-empty */
-    }
+        .divSmartGrid input[type="checkbox"] + span:before {
+            content: "\f096"; /* check-empty */
+        }
 
-    #divSmartGrid input[type="checkbox"]:checked + span:before {
-        content: "\f046"; /* check */
-        color: Green;
-    }
+        .divSmartGrid input[type="checkbox"]:checked + span:before {
+            content: "\f046"; /* check */
+            color: Green;
+        }
 </style>
 <script type="text/javascript">
     /* Custom Render */
@@ -167,7 +160,8 @@
         title: fileName,
         exportOptions: {
             columns: ':visible:not(.noPrint)'
-        },
+        }
+        ,
         customize: function (xlsx) {
             var sheet = xlsx.xl.worksheets['Sheet1.xml'];
             $('row c[r^="C"]', sheet).attr('s', '2');
@@ -519,6 +513,6 @@
     }
 </script>
 
-<div class="table-responsive container-fluid" id="divSmartGrid" runat="server">
+<div class="table-responsive container-fluid divSmartGrid" id="divSmartGrid" runat="server">
 </div>
 <asp:Button ID="btnRowSelected" runat="server" Visible="false" />
