@@ -13,6 +13,7 @@ namespace MyTherapy
         protected void Page_Load(object sender, EventArgs e)
         {
             DataManager.TestConnection(Utility.GetConnectionString);
+            DataManager.TestConnectionLINQ(Utility.GetConnectionString);
         }
 
         protected void clickMeButton_Click(object sender, EventArgs e)

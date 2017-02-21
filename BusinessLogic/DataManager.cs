@@ -1,36 +1,37 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace MyTherapy.BusinessLogic
 {
     public class DataManager
     {
+        public static bool TestConnectionLINQ(string connString)
+        {
+            using (MyTherapyContext db = new MyTherapyContext())
+            {
+                var res = (from a in db.user select a).ToList();
+                return res.Any();
+            }
+        }
+
         public static bool TestConnection(string connString)
         {
-            if (string.IsNullOrEmpty(connString))
-                return false;
-
-            MySqlConnection dbConn = new MySqlConnection(connString);
-
-            MySqlCommand cmd = dbConn.CreateCommand();
-            cmd.CommandText = "SELECT * from user";
-            try
-            {
-                dbConn.Open();
-            }
-            catch (Exception e)
-            {
-            }
-            MySqlDataReader reader = cmd.ExecuteReader();
-
-            while (reader.Read())
-            {
-                string a = reader.ToString();
-            }
-
+            //MySqlConnection MyConnection = null;
+            //MySqlDataReader MyReader = null;
+            //// Create the SQL connection.
+            //MyConnection = new MySqlConnection("server=5.189.165.60;port=3306;database=MyTherapy;user=user;password=user;");
+            //MyConnection.Open();
+            //// Create the command.
+            //MySqlCommand MyCommand = new MySqlCommand("SELECT * FROM user", MyConnection);
+            //// Execute the command
+            //MyReader = MyCommand.ExecuteReader();
+            //while (MyReader.Read())
+            //{
+            //    string a = MyReader.ToString();
+            //}
+            //// ...
+            //MyReader.Close();
+            //MyConnection.Close();
             return true;
         }
     }

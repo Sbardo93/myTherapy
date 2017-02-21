@@ -8,7 +8,7 @@ namespace MyTherapy
 {
     public class Utility
     {
-        const string ConnString = "ConnString";
+        const string ConnString = "MyTherapyContext";
         public static string GetConnectionString
         {
             get

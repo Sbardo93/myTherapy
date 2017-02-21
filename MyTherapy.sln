@@ -3,25 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTherapy", "MyTherapy\MyTherapy.csproj", "{378208DE-DCC8-417E-9D0A-921A29CE7388}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTherapy.BusinessLogic", "BusinessLogic\MyTherapy.BusinessLogic.csproj", "{02593E9B-90EE-4096-A7EF-7E3D1E39B243}"
-EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{378208DE-DCC8-417E-9D0A-921A29CE7388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{378208DE-DCC8-417E-9D0A-921A29CE7388}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{378208DE-DCC8-417E-9D0A-921A29CE7388}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{378208DE-DCC8-417E-9D0A-921A29CE7388}.Release|Any CPU.Build.0 = Release|Any CPU
-		{02593E9B-90EE-4096-A7EF-7E3D1E39B243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02593E9B-90EE-4096-A7EF-7E3D1E39B243}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02593E9B-90EE-4096-A7EF-7E3D1E39B243}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02593E9B-90EE-4096-A7EF-7E3D1E39B243}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
